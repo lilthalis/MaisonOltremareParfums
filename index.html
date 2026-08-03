@@ -3,205 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maison Oltremare — Firenze</title>
-    <!-- Tipografia Editorial: Cormorant Garamond & Inter -->
+    <meta name="description" content="Maison Oltremare — archive editoriale di fragranze, borse e creazioni artigianali immaginate a Firenze.">
+    <title>Maison Oltremare — Archivio 2026</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- CABEÇALHO SILENCIOSO -->
-    <header class="navbar font-serif">
-        <a href="#" class="brand-logo">MAISON OLTREMARE</a>
-        <nav class="nav-links">
+    <header class="navbar font-serif" aria-label="Navigazione principale">
+        <a href="#top" class="brand-logo">MAISON OLTREMARE</a>
+        <nav class="nav-links" aria-label="Sezioni">
+            <a href="#esperienza">Esperienza</a>
             <a href="#archivio">Archivio</a>
-            <a href="#fragranze">Le Fragranze</a>
-            <a href="#maison">La Maison</a>
+            <a href="#fragranze">Fragranze</a>
+            <a href="#atelier">Atelier</a>
         </nav>
     </header>
 
-    <!-- HERO SECTION CINEMATOGRÁFICA (100vh) -->
-    <section class="hero">
-        <div class="hero-bg-overlay"></div>
-        <div class="hero-content">
-            <span class="hero-subtitle">Archive 2026</span>
-            <h1 class="hero-title">MAISON OLTREMARE</h1>
-            <p class="hero-poetic">
-                Sette Luoghi.<br>
-                Sette Memorie.<br>
-                Sette Fragranze.
-            </p>
-            <a href="#esperienza" class="btn-esplora">Esplora l'Archivio</a>
-        </div>
-    </section>
+    <main id="top">
+        <section class="hero" aria-label="Maison Oltremare Archive 2026">
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-content reveal-now">
+                <span class="hero-subtitle">Archive 2026</span>
+                <h1 class="hero-title">MAISON OLTREMARE</h1>
+                <p class="hero-poetic">Sette Luoghi.<br>Sette Memorie.<br>Sette Fragranze.</p>
+                <a href="#esperienza" class="btn-esplora">Esplora l'Archivio</a>
+            </div>
+            <div class="scroll-note">Scorri lentamente</div>
+        </section>
 
-    <!-- PRIMEIRA EXPERIÊNCIA NARRATIVA (EXPOSIÇÃO) -->
-    <section id="esperienza" class="narrative-section">
-        <div class="container">
-            <div class="narrative-block reveal">
-                <div class="image-wrapper portrait">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&q=80&w=1200" alt="Arquitetura de Firenze e Luz Natural">
+        <section id="esperienza" class="narrative-section" aria-label="Esperienza editoriale della Maison">
+            <div class="container">
+                <div class="narrative-block reveal">
+                    <div class="image-wrapper portrait parallax-frame">
+                        <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&q=80&w=1400" alt="Architettura italiana in pietra avvolta da luce naturale">
+                    </div>
+                    <div class="text-wrapper">
+                        <span class="caption">Capitolo I — Firenze</span>
+                        <h2 class="section-title">L'Arte del Silenzio</h2>
+                        <p class="editorial-text">Nascente negli atelier silenziosi lungo l'Arno, Maison Oltremare non presenta oggetti: custodisce memorie. Ogni creazione è pensata come una sala museale, sospesa tra marmo, pelle vegetale, bronzo e luce antica.</p>
+                    </div>
                 </div>
-                <div class="text-wrapper">
-                    <span class="caption">Capitolo I — Firenze</span>
-                    <h2 class="section-title">L'Arte del Silenzio</h2>
-                    <p class="editorial-text">
-                        Nascente nos ateliês seculares às margens do Rio Arno. A Maison Oltremare não cria utilitários; esculpe memórias gravadas em couro vegetal, metais pátina e eflúvios raros colhidos antes do amanhecer mediterrâneo.
-                    </p>
+
+                <div class="narrative-block reverse reveal">
+                    <div class="image-wrapper landscape parallax-frame">
+                        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=1400" alt="Atelier italiano con materiali di lusso e luce morbida">
+                    </div>
+                    <div class="text-wrapper">
+                        <span class="caption">Capitolo II — Il Tempo</span>
+                        <h2 class="section-title">La Materia e la Mano</h2>
+                        <p class="editorial-text">Le cuciture appaiono come linee disegnate a grafite. Le superfici non cercano il nuovo, ma la permanenza: cuoio, pietra e fragranze che maturano con la stessa discrezione di un palazzo rinascimentale.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="narrative-block reverse reveal">
-                <div class="image-wrapper landscape">
-                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=1200" alt="Atelier de Couro Italiano">
-                </div>
-                <div class="text-wrapper">
-                    <span class="caption">Capitolo II — Il Tempo</span>
-                    <h2 class="section-title">A Matéria e a Mão</h2>
-                    <p class="editorial-text">
-                        Cada costura é executada sem pressa sob a luz natural das janelas altas de pedra italiana. Nossas criações não pertencem às estações do ano; pertencem às décadas.
-                    </p>
+        <section class="cinema-section reveal" aria-label="Film della Maison">
+            <div class="cinema-media">
+                <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1515542706656-8e6ef17a1521?auto=format&fit=crop&q=80&w=1800">
+                    <source src="https://cdn.coverr.co/videos/coverr-light-through-a-window-9671/1080p.mp4" type="video/mp4">
+                </video>
+                <div class="cinema-overlay"></div>
+            </div>
+            <div class="cinema-copy">
+                <span class="caption">Intermezzo — Luce Naturale</span>
+                <h2>Ogni scroll rivela un nuovo capitolo.</h2>
+                <p>Non una vetrina, ma un archivio visitabile: fotografie monumentali, silenzi, dettagli e testi che invitano a soffermarsi.</p>
+            </div>
+        </section>
+
+        <section id="archivio" class="archivio-section">
+            <div class="container">
+                <header class="section-header reveal">
+                    <span class="caption">Exposizione</span>
+                    <h2 class="section-title-large">Archivio delle Creazioni</h2>
+                    <p>Collezioni come sale, non prodotti come scaffali.</p>
+                </header>
+
+                <div class="collections-grid">
+                    <article class="collection-card reveal">
+                        <div class="card-media"><img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=1200" alt="Fragrâncias italianas em composição editorial"><div class="card-overlay"></div></div>
+                        <div class="card-info"><h3 class="card-title">LE SETTE FRAGRANZE</h3><p class="card-desc">Sette luoghi italiani tradotti em extraits raros, vidro soprado e memória salina.</p><a href="#fragranze" class="btn-link">Esplora →</a></div>
+                    </article>
+
+                    <article class="collection-card reveal">
+                        <div class="card-media"><img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=1200" alt="Bolsa em couro sob luz editorial"><div class="card-overlay"></div></div>
+                        <div class="card-info"><h3 class="card-title">BORSE D'OLTREMARE</h3><p class="card-desc">Bolsas artesanais fotografadas entre madeira italiana, couro, mármore e sombra.</p><a href="#atelier" class="btn-link">Esplora →</a></div>
+                    </article>
+
+                    <article class="collection-card reveal">
+                        <div class="card-media"><img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3?auto=format&fit=crop&q=80&w=1200" alt="Pelletteria em couro artesanal"><div class="card-overlay"></div></div>
+                        <div class="card-info"><h3 class="card-title">PELLETTERIA</h3><p class="card-desc">Pequenos objetos de couro com acabamento em bronze envelhecido e bordas polidas.</p><a href="#atelier" class="btn-link">Esplora →</a></div>
+                    </article>
+
+                    <article class="collection-card reveal">
+                        <div class="card-media"><img src="https://images.unsplash.com/photo-1611591475140-be3e7c297926?auto=format&fit=crop&q=80&w=1200" alt="Acessórios premium em atmosfera museal"><div class="card-overlay"></div></div>
+                        <div class="card-info"><h3 class="card-title">ACCESSORI</h3><p class="card-desc">Adornos discretos inspirados em relevos, sombras e metais de palazzi florentinos.</p><a href="#atelier" class="btn-link">Esplora →</a></div>
+                    </article>
+
+                    <article class="collection-card full-width reveal">
+                        <div class="card-media"><img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=1800" alt="Capsule collection com atmosfera de Vogue Italia"><div class="card-overlay"></div></div>
+                        <div class="card-info"><h3 class="card-title">CAPSULE COLLECTION</h3><p class="card-desc">Edições numeradas concebidas como peças de exposição por mestres artesãos de Firenze.</p><a href="#atelier" class="btn-link">Esplora →</a></div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- EXPOSIÇÃO DAS COLEÇÕES: ARCHIVIO DELLE CREAZIONI -->
-    <section id="archivio" class="archivio-section">
-        <div class="container">
-            <header class="section-header reveal">
-                <span class="caption">Exposizione</span>
-                <h2 class="section-title-large">Archivio delle Creazioni</h2>
-            </header>
-
-            <div class="collections-grid">
-                
-                <!-- CARTÃO 1: LE SETTE FRAGRANZE -->
-                <article class="collection-card reveal">
-                    <div class="card-media">
-                        <img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&q=80&w=1000" alt="Le Sette Fragranze">
-                        <div class="card-overlay"></div>
-                    </div>
-                    <div class="card-info">
-                        <h3 class="card-title">LE SETTE FRAGRANZE</h3>
-                        <p class="card-desc">Extratos de perfume refinados em frascos de vidro soprado à mão.</p>
-                        <a href="#fragranze" class="btn-link">Esplora →</a>
-                    </div>
-                </article>
-
-                <!-- CARTÃO 2: BORSE D'OLTREMARE -->
-                <article class="collection-card reveal">
-                    <div class="card-media">
-                        <img src="https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&q=80&w=1000" alt="Borse d'Oltremare">
-                        <div class="card-overlay"></div>
-                    </div>
-                    <div class="card-info">
-                        <h3 class="card-title">BORSE D'OLTREMARE</h3>
-                        <p class="card-desc">Esculturas vestíveis em couro toscano sob mármore e luz antológica.</p>
-                        <a href="#" class="btn-link">Esplora →</a>
-                    </div>
-                </article>
-
-                <!-- CARTÃO 3: PELLETTERIA -->
-                <article class="collection-card reveal">
-                    <div class="card-media">
-                        <img src="https://images.unsplash.com/photo-1607522370275-f14206abe5d3?auto=format&fit=crop&q=80&w=1000" alt="Pelletteria">
-                        <div class="card-overlay"></div>
-                    </div>
-                    <div class="card-info">
-                        <h3 class="card-title">PELLETTERIA</h3>
-                        <p class="card-desc">Pequenos artigos de couro trabalhados com acabamento em bronze envelhecido.</p>
-                        <a href="#" class="btn-link">Esplora →</a>
-                    </div>
-                </article>
-
-                <!-- CARTÃO 4: ACCESSORI -->
-                <article class="collection-card reveal">
-                    <div class="card-media">
-                        <img src="https://images.unsplash.com/photo-1611591475140-be3e7c297926?auto=format&fit=crop&q=80&w=1000" alt="Accessori">
-                        <div class="card-overlay"></div>
-                    </div>
-                    <div class="card-info">
-                        <h3 class="card-title">ACCESSORI</h3>
-                        <p class="card-desc">Adornos em metais nobres inspirados nos relevos renascentistas.</p>
-                        <a href="#" class="btn-link">Esplora →</a>
-                    </div>
-                </article>
-
-                <!-- CARTÃO 5: CAPSULE COLLECTION -->
-                <article class="collection-card full-width reveal">
-                    <div class="card-media">
-                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&q=80&w=1600" alt="Capsule Collection">
-                        <div class="card-overlay"></div>
-                    </div>
-                    <div class="card-info">
-                        <h3 class="card-title">CAPSULE COLLECTION</h3>
-                        <p class="card-desc">Edições numeradas criadas em colaboração com mestres artesãos florentinos.</p>
-                        <a href="#" class="btn-link">Esplora →</a>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- PÁGINA / EXPOSIÇÃO DO PERFUME: MARE ANTICO (LIVRO HISTÓRICO) -->
-    <section id="fragranze" class="exhibition-page">
-        <div class="container">
-            <div class="book-exhibition reveal">
-                
-                <div class="book-media">
-                    <img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=1000" alt="Frasco Mare Antico">
-                </div>
-
-                <div class="book-content">
+        <section id="fragranze" class="perfume-archive" aria-label="Archivio storico delle fragranze">
+            <article class="perfume-panel reveal">
+                <div class="perfume-image"><img src="https://images.unsplash.com/photo-1594035910387-fea47794261f?auto=format&fit=crop&q=80&w=1200" alt="Frasco do perfume Mare Antico em destaque"></div>
+                <div class="perfume-story">
                     <span class="caption">Extrait de Parfum — N° I</span>
-                    <h2 class="book-title">MARE ANTICO</h2>
-                    <p class="poetic-quote">"O perfume das memórias esquecidas do Mediterrâneo."</p>
-
-                    <div class="book-divider"></div>
-
-                    <div class="book-chapter">
-                        <h4>A História</h4>
-                        <p>Inspirado na maresia que adentra as ruínas de pedra italiana ao crepúsculo. Mare Antico captura a brisa salina impregnada nos penhascos da Costa Amalfitana antes que a noite caia.</p>
-                    </div>
-
-                    <div class="book-chapter">
-                        <h4>Notas Olfativas</h4>
-                        <ul class="olfactory-list">
-                            <li><span>Topo</span> Bergamota Calabra</li>
-                            <li><span>Coração</span> Sal Marinho & Salvia</li>
-                            <li><span>Fundo</span> Patchouli & Âmbar Cinzento</li>
-                        </ul>
-                    </div>
-
-                    <div class="book-chapter">
-                        <h4>Inspiração & Paisagem</h4>
-                        <p>As falésias calcárias iluminadas pelo sol poente e o aroma das velhas caravelas de madeira e especiarias.</p>
-                    </div>
-
-                    <div class="book-footer">
-                        <a href="#" class="btn-aquire">Avançar para Requisição de Frasco — 100ml</a>
-                    </div>
+                    <h2>MARE ANTICO</h2>
+                    <p class="poetic-quote">O perfume das memórias do Mediterrâneo.</p>
+                    <div class="notes"><span>Bergamota.</span><span>Sal Marinho.</span><span>Patchouli.</span><span>Âmbar Cinzento.</span></div>
+                    <p>Família olfativa: âmbar marinho. Inspiração: falésias calcárias da Costa Amalfitana quando o sol toca a pedra e o vento atravessa ruínas silenciosas.</p>
                 </div>
+            </article>
 
+            <article class="perfume-panel reverse reveal">
+                <div class="perfume-image"><img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&q=80&w=1200" alt="Frasco de perfume em luz quente de biblioteca antiga"></div>
+                <div class="perfume-story">
+                    <span class="caption">Extrait de Parfum — N° II</span>
+                    <h2>PIETRA D'ORO</h2>
+                    <p class="poetic-quote">A luz dourada preservada na pedra de Firenze.</p>
+                    <div class="notes"><span>Íris.</span><span>Madeira de Cedro.</span><span>Incenso.</span><span>Couro Suave.</span></div>
+                    <p>Família olfativa: amadeirada irisada. Inspiração: galerias renascentistas, pó de mármore, couro antigo e silêncio após o fechamento do museu.</p>
+                </div>
+            </article>
+        </section>
+
+        <section id="atelier" class="atelier-section reveal">
+            <div class="container atelier-grid">
+                <div>
+                    <span class="caption">Atelier — Borse e Pelle</span>
+                    <h2 class="section-title-large">Fotografadas como um editorial, feitas como herança.</h2>
+                </div>
+                <p class="editorial-text">As bolsas não repousam em fundos brancos. Elas surgem sobre madeira encerada, mármore frio, janelas antigas, ferragens em sombra e close-ups de costuras que revelam o gesto humano.</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- RODAPÉ DE MUSEU EDITORIAL -->
     <footer class="maison-footer">
         <div class="container footer-content">
-            <div class="footer-brand">
-                <h2>MAISON OLTREMARE</h2>
-                <p>Firenze • Italia</p>
-            </div>
-            <div class="footer-meta">
-                <p>© 2026 Maison Oltremare. Todos os direitos de criação reservados.</p>
-                <p>Via de' Tornabuoni, Firenze FI, Itália</p>
-            </div>
+            <div class="footer-brand"><h2>MAISON OLTREMARE</h2><p>Firenze • Italia</p></div>
+            <div class="footer-meta"><p>© 2026 Maison Oltremare. Tutti i diritti di creazione riservati.</p><p>Via de' Tornabuoni, Firenze FI, Italia</p></div>
         </div>
     </footer>
 
