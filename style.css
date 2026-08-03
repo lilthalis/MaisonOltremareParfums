@@ -1,0 +1,43 @@
+/* Custom Paleta de Cores e Tipografia Maison Oltremare */
+:root {
+  --color-bg-dark: #0B0B0B;
+  --color-navy-ultramarine: #09111E;
+  --color-gold: #D4AF37;
+  --color-gold-hover: #B5932A;
+  --color-pearl-white: #F9F8F6;
+}
+
+body {
+  background-color: var(--color-bg-dark);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: var(--color-pearl-white);
+}
+
+h1, h2, h3, .font-serif {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Efeito Glow Dourado sutil para os produtos premium */
+.product-card-glow {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.product-card-glow:hover {
+  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Custom Scrollbar com Toque Dourado */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0b0b;
+}
+::-webkit-scrollbar-thumb {
+  background: #222;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}
