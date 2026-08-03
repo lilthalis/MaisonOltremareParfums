@@ -1,43 +1,513 @@
-/* Custom Paleta de Cores e Tipografia Maison Oltremare */
+/* ==========================================================================
+   MAISON OLTREMARE — PALETA & TIPOGRAFIA (QUIET LUXURY & MUSEU)
+   ========================================================================== */
+
 :root {
-  --color-bg-dark: #0B0B0B;
-  --color-navy-ultramarine: #09111E;
-  --color-gold: #D4AF37;
-  --color-gold-hover: #B5932A;
-  --color-pearl-white: #F9F8F6;
+    /* Paleta Editorial */
+    --bg-marfim: #FDFBF7;
+    --bg-papel: #F7F4EF;
+    --bg-pedra: #EAE5DC;
+    
+    /* Detalhes Nobres */
+    --dourado-envelhecido: #C5A059;
+    --bronze: #8C6D3B;
+    --preto-carvao: #1A1A1A;
+    --cinza-quente: #5A5752;
+    --linha-suave: rgba(26, 26, 26, 0.08);
+
+    /* Fontes */
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Inter', -apple-system, sans-serif;
+}
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--bg-marfim);
+    color: var(--preto-carvao);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background-color: var(--color-bg-dark);
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  color: var(--color-pearl-white);
+    overflow-x: hidden;
 }
 
-h1, h2, h3, .font-serif {
-  font-family: 'Cormorant Garamond', serif;
+/* Tipografia */
+h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    letter-spacing: 0.02em;
 }
 
-/* Efeito Glow Dourado sutil para os produtos premium */
-.product-card-glow {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--cinza-quente);
+    font-weight: 300;
 }
 
-.product-card-glow:hover {
-  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
-  transform: translateY(-2px);
+.caption {
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    color: var(--dourado-envelhecido);
+    display: block;
+    margin-bottom: 0.8rem;
 }
 
-/* Custom Scrollbar com Toque Dourado */
-::-webkit-scrollbar {
-  width: 6px;
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 3rem;
 }
-::-webkit-scrollbar-track {
-  background: #0b0b0b;
+
+/* ==========================================================================
+   NAVBAR (HEADER SILENCIOSO)
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    transition: background 0.4s ease, padding 0.4s ease;
 }
-::-webkit-scrollbar-thumb {
-  background: #222;
-  border-radius: 3px;
+
+.navbar.scrolled {
+    background: rgba(253, 251, 247, 0.92);
+    backdrop-filter: blur(10px);
+    padding: 1.2rem 3rem;
+    border-b: 1px solid var(--linha-suave);
 }
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gold);
+
+.brand-logo {
+    font-size: 1.2rem;
+    letter-spacing: 0.3em;
+    text-decoration: none;
+    color: var(--preto-carvao);
+    font-weight: 400;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--preto-carvao);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-left: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--dourado-envelhecido);
+}
+
+/* ==========================================================================
+   HERO SECTION (100vh)
+   ========================================================================== */
+.hero {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-image: url('https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&q=80&w=2000');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(253,251,247,0.4) 0%, rgba(26,26,26,0.5) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: var(--bg-marfim);
+    max-width: 700px;
+    padding: 0 1rem;
+}
+
+.hero-subtitle {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    color: var(--bg-papel);
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    letter-spacing: 0.2em;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+
+.hero-poetic {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--bg-papel);
+    margin-bottom: 3rem;
+    font-weight: 300;
+}
+
+.btn-esplora {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border: 1px solid rgba(253, 251, 247, 0.6);
+    color: var(--bg-marfim);
+    text-decoration: none;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    transition: all 0.4s ease;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.btn-esplora:hover {
+    background: var(--bg-marfim);
+    color: var(--preto-carvao);
+    border-color: var(--bg-marfim);
+}
+
+/* ==========================================================================
+   NARRATIVE EXPERIENCES (HISTÓRIA DA MAISON)
+   ========================================================================== */
+.narrative-section {
+    padding: 10rem 0;
+    background-color: var(--bg-marfim);
+}
+
+.narrative-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+
+.narrative-block.reverse {
+    direction: rtl;
+}
+
+.narrative-block.reverse .text-wrapper {
+    direction: ltr;
+}
+
+.image-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: saturate(0.85);
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.03);
+}
+
+.section-title {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--preto-carvao);
+}
+
+.editorial-text {
+    font-size: 1.05rem;
+    max-width: 480px;
+}
+
+/* ==========================================================================
+   ARCHIVIO DELLE CREAZIONI (COLEÇÕES EM CARTÕES MONUMENTAIS)
+   ========================================================================== */
+.archivio-section {
+    padding: 8rem 0;
+    background-color: var(--bg-papel);
+    border-top: 1px solid var(--linha-suave);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.section-title-large {
+    font-size: 3.2rem;
+    color: var(--preto-carvao);
+}
+
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.collection-card {
+    position: relative;
+    background: var(--bg-marfim);
+    overflow: hidden;
+    height: 580px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border: 1px solid var(--linha-suave);
+}
+
+.collection-card.full-width {
+    grid-column: span 2;
+    height: 600px;
+}
+
+.card-media {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.9);
+    transition: transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(26,26,26,0.85) 0%, rgba(26,26,26,0.1) 60%);
+    transition: opacity 0.5s ease;
+}
+
+.card-info {
+    position: relative;
+    z-index: 2;
+    padding: 3rem;
+    color: var(--bg-marfim);
+    transform: translateY(10px);
+    transition: transform 0.5s ease;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.6rem;
+    color: var(--bg-marfim);
+}
+
+.card-desc {
+    font-size: 0.85rem;
+    color: rgba(253, 251, 247, 0.8);
+    margin-bottom: 1.5rem;
+    max-width: 400px;
+}
+
+.btn-link {
+    text-decoration: none;
+    color: var(--dourado-envelhecido);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-weight: 500;
+}
+
+/* Hover Discreto e Elegante */
+.collection-card:hover .card-media img {
+    transform: scale(1.05);
+}
+
+.collection-card:hover .card-info {
+    transform: translateY(0);
+}
+
+.collection-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.15), transparent);
+    transition: left 0.8s ease;
+    z-index: 3;
+}
+
+.collection-card:hover::after {
+    left: 100%;
+}
+
+/* ==========================================================================
+   PERFUMES — PÁGINA LIVRO HISTÓRICO
+   ========================================================================== */
+.exhibition-page {
+    padding: 10rem 0;
+    background-color: var(--bg-marfim);
+}
+
+.book-exhibition {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 6rem;
+    align-items: center;
+    background: var(--bg-papel);
+    padding: 4rem;
+    border: 1px solid var(--linha-suave);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.02);
+}
+
+.book-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+}
+
+.book-title {
+    font-size: 3.5rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.poetic-quote {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--bronze);
+    margin-bottom: 2rem;
+}
+
+.book-divider {
+    height: 1px;
+    width: 60px;
+    background-color: var(--dourado-envelhecido);
+    margin-bottom: 2rem;
+}
+
+.book-chapter {
+    margin-bottom: 2rem;
+}
+
+.book-chapter h4 {
+    font-family: var(--font-sans);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--preto-carvao);
+    margin-bottom: 0.5rem;
+}
+
+.olfactory-list {
+    list-style: none;
+    margin-top: 0.5rem;
+}
+
+.olfactory-list li {
+    font-size: 0.9rem;
+    color: var(--cinza-quente);
+    padding: 0.4rem 0;
+    border-bottom: 1px dashed var(--linha-suave);
+}
+
+.olfactory-list li span {
+    font-weight: 500;
+    color: var(--bronze);
+    display: inline-block;
+    width: 90px;
+}
+
+.btn-aquire {
+    display: block;
+    text-align: center;
+    padding: 1.2rem;
+    background: var(--preto-carvao);
+    color: var(--bg-marfim);
+    text-decoration: none;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-top: 2rem;
+    transition: background 0.3s ease;
+}
+
+.btn-aquire:hover {
+    background: var(--bronze);
+}
+
+/* ==========================================================================
+   ANIMAÇÕES DE REVEAL & FOOTER
+   ========================================================================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.maison-footer {
+    padding: 6rem 0;
+    background-color: var(--preto-carvao);
+    color: var(--bg-marfim);
+    text-align: center;
+}
+
+.footer-brand h2 {
+    font-size: 1.8rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 0.5rem;
+}
+
+.footer-brand p {
+    color: var(--dourado-envelhecido);
+    font-size: 0.75rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+.footer-meta {
+    margin-top: 4rem;
+    border-t: 1px solid rgba(253, 251, 247, 0.1);
+    padding-top: 2rem;
+    font-size: 0.75rem;
+    color: rgba(253, 251, 247, 0.4);
+}
+
+/* Responsividade Mobile First */
+@media (max-width: 900px) {
+    .container { padding: 0 1.5rem; }
+    .hero-title { font-size: 2.2rem; }
+    .narrative-block, .book-exhibition { grid-template-columns: 1fr; gap: 3rem; }
+    .narrative-block.reverse { direction: ltr; }
+    .collections-grid { grid-template-columns: 1fr; }
+    .collection-card.full-width { grid-column: span 1; }
+    .book-exhibition { padding: 2rem; }
 }
